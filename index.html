@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>iniwebsitemu — Kantor Virtual 3D</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+<div id="hud">
+  <div class="hud-left">
+    <div class="hud-title">iniwebsitemu · Kantor Virtual 3D</div>
+    <div class="hud-loc"><span class="badge">LUAR</span><b>Halaman Depan</b><span id="clock">Siang · 14:53</span></div>
+  </div>
+  <div class="hud-right">
+    <button id="btnLang">ID | EN</button>
+    <button id="btnEditChar">👕 Ubah karakter</button>
+  </div>
+</div>
+
+<div id="hint">WASD / ↑↓←→ untuk jalan · klik lantai untuk jalan · E / klik untuk interaksi · drag putar kamera</div>
+<div id="minimapWrap"><canvas id="minimap" width="160" height="160"></canvas><div class="minimap-label"><span id="miniZone">LUAR</span> · Lobi di utara (pintu gedung)</div></div>
+<a id="wa" href="https://wa.me/6285286038143" target="_blank">💬<span class="wa-dot">1</span></a>
+<div id="waBubble"><button id="waX">×</button><b>Halo Kak!</b><br>Mau dibuatkan website? <b style="color:#0a7a42">Konsultasi gratis</b> lewat WhatsApp.</div>
+
+<div id="creator">
+  <div class="creator-head"><span>✨</span><div><b>Buat karaktermu</b><p>Selamat datang di kantor iniwebsitemu! Pilih tampilanmu dulu, ya.</p></div></div>
+  <div class="creator-body">
+    <label>Mode karakter</label><div class="pills" id="modePills"></div>
+    <label id="lblSkin">Warna kulit</label><div class="swatches" id="skinSwatches"></div>
+    <label id="lblHair">Rambut</label><div class="pills" id="hairPills"></div>
+    <div id="hijabRow"><label id="lblHijab">Warna hijab</label><div class="swatches" id="hijabSwatches"></div></div>
+    <label id="lblShirt">Baju</label><div class="pills" id="shirtPills"></div>
+  </div>
+  <div class="creator-foot"><button id="btnRandom">🔀 Acak</button><button id="btnStart">✓ Mulai</button></div>
+</div>
+
+<div id="touch"><div class="t-row"><button data-k="w">▲</button></div><div class="t-row"><button data-k="a">◀</button><button data-k="e">E</button><button data-k="d">▶</button></div><div class="t-row"><button data-k="s">▼</button></div></div>
+
+<div id="dlg"><div class="dlg-name" id="dlgName">Penjual</div><p id="dlgText"></p><div class="dlg-foot"><span id="dlgHint">E / klik ▸ lanjut</span><button id="dlgNext">▸</button></div></div>
+
+<div id="modal"><div id="modalBg"></div><div id="modalBox">
+  <button id="modalClose" aria-label="Tutup">✕</button>
+  <img id="mImg" alt="Preview portfolio"><div class="m-body"><div id="mCat"></div><h3 id="mTitle"></h3><p id="mBlurb"></p><div id="mTags"></div><div class="m-actions"><a id="mLive" target="_blank" class="btn">Lihat Live ↗</a><a id="mDetail" target="_blank" class="btn ghost">Detail ↗</a></div></div>
+</div></div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
